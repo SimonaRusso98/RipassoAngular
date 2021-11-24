@@ -1,0 +1,34 @@
+
+    .containerHome{
+        margin-top: 100px;
+        margin-bottom:150px;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        
+        img{
+        width:200px;
+          height:200px;
+        }
+        
+    }
+
+    .containerCarousel{
+      width:1000px;
+      height:00px;
+    }
+
+    .containerFig{
+      width:auto;
+      height:auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
+    .containerForm{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }

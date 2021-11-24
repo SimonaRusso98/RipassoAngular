@@ -1,0 +1,88 @@
+<div class="containerHome vh-100">
+    <div class="row vh-100">
+        <div class="col-sm-12 col-md-2">
+            <div class="mat-subheading-2" style="text-align: center;">Menu</div>
+            <div class="containerFig">
+            <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+              <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+              <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+            </div>
+        </div>
+      <div class="col-sm-12 col-md-8">
+        <div class="containerForm">
+        <form [formGroup] = 'surveyform'(ngSubmit)="onSubmit()" style="margin-top: 150px;">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Ex. Mario" value="">
+            &nbsp;
+          </mat-form-field>
+          &nbsp;
+          <mat-form-field class="example-full-width "  appearance="fill">
+            <mat-label>Surname</mat-label>
+            <input matInput placeholder="Ex. Rossi" value="">
+            &nbsp;
+          </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Ex. Central Park" value="">
+          &nbsp;
+        </mat-form-field>
+        &nbsp;
+        <br>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Add Note</mat-label>
+            <textarea matInput placeholder="Ex. Delivery at 9 pm..."></textarea>
+            &nbsp;
+          </mat-form-field>
+          <div formGroupName="feelings">
+          <mat-radio-group aria-label="Select an option">
+            <h2>It's the first time that you order here?</h2>
+            <mat-radio-button value="yes" (click)="ifClicked1()"> Yes </mat-radio-button><br><br>
+            <mat-radio-button value="no" (click)="ifClicked2()">No</mat-radio-button><br><br>
+            <mat-radio-button value="maybe" (click)="ifClicked3()">Don't rembember</mat-radio-button><br><br>
+          </mat-radio-group>
+          <button  mat-button color="primary" *ngIf="check1 || check3" (click)="showAlert()">Submit</button>
+        </div>
+          <br>
+          <div class="form-group">
+              <h4>State</h4>
+        <mat-form-field appearance="fill">
+          <mat-label>State</mat-label>
+          <mat-select>
+            <mat-option>None</mat-option>
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+          </mat-select>
+        </mat-form-field></div>
+        <button mat-button color="primary" routerLink='/login-form' routerLinkActive="active">Prosegui</button>
+            </form>
+          </div>
+      </div>
+     
+      <div class="col-sm-12 col-md-2">
+            <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+              <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+              <figure style="justify-content: center;"class="figure">
+                <img src="https://picsum.photos/200/300?grayscale" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+              </figure>
+            </div>
+          </div>
+    </div>
+    <br>
+    
