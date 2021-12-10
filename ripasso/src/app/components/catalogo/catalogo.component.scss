@@ -1,0 +1,58 @@
+.container-catalogo{
+    margin-top: 100px;
+    display: flex;
+   text-align: center;
+    justify-content: space-between;
+   
+}
+
+.col-sm-12, .col-md-2{
+    img{
+        width:300px;
+        height:250px;
+    }
+}
+
+#amazon {
+    background: url('/assets/amazon.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .container-items{
+      margin-top: 70px;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+
+      img{
+          width:250px;
+          height:250px;
+          margin-right:270px;
+      }
+
+      h1{
+          margin-top: 50px;
+          margin-left: 50px;
+          
+      }
+
+      hr{
+          width:1000px;
+          
+      }
+  }
+
+
+  #price{
+      color: green;
+  }
+
+
+  
+  #descriptions{
+    p{
+        margin-top: 20px;
+    }
+  }

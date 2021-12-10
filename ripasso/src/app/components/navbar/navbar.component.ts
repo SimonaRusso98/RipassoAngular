@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { setClassMetadata } from '@angular/core/src/r3_symbols';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+myCount: number| undefined | null;
 
-  constructor() { }
+  constructor(public cs: CartService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  
   }
+
+  get setData(): number{
+    return this.cs.count;
+    }
+      
+
 
 }

@@ -1,1 +1,83 @@
-<p>catalogo works!</p>
+<div class="container-catalogo">
+<div class="row vw-100">
+    <div class="col-sm-12 col-md-2">
+        <img src='assets/black_friday.png'>
+    </div>
+    <div class="col-sm-12 col-md-8">
+        <div class="container-items">
+            <div class="col-sm-12 col-md-2">
+                <img src='/assets/iphone.png'>
+                <hr>
+            </div>
+            <div class="col-sm-12 col-md-5" style="text-align: center;">
+                <h1><b>Iphone XR 128GB</b></h1>
+                <button (click)="showDesc()"mat-flat-button color="primary" style="margin-bottom: 50px;">{{"Data Sheet" | translate}}</button>
+                <div *ngIf="description">
+                    <p id="descriptions" style="text-align: justify;">Apple iPhone XR is an iOS smartphone. The 6.1-inch screen of this smartphone is of the IPS LCD type and has a resolution of 828 x 1792 pixels. The resolution of the main camera is 12 megapixels and is also equipped with a stabilizer, while the secondary one is 7 megapixels.</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1" style="margin-top: 45px;">
+                <h2 id="price">800$</h2>
+               <button (click)="callService()" mat-button><mat-icon>shopping_cart</mat-icon></button> 
+            </div>
+        </div>
+        <div class="container-items">
+            <div class="col-sm-12 col-md-2">
+                <img src='/assets/iphone.png'>
+                <hr>
+            </div>
+            <div class="col-sm-12 col-md-5" style="text-align: center;">
+                <h1><b>Iphone SE 256GB</b></h1>
+                <button mat-flat-button color="primary" (click)="showDesc1()" style="margin-bottom: 50px;">{{"Data Sheet" | translate}}</button>
+                <div *ngIf="description1">
+                    <p id="descriptions" style="text-align: justify;">Apple iPhone SE is an iOS smartphone. The 4-inch screen of this smartphone is of the IPS LCD type and has a resolution of 640x1136 pixels. The processor of this device is a dual 64-bit Apple A9 running at 1.84 GHz and has a PowerVR GT7600 graphics processor</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1" style="margin-top: 45px;">
+                <h2 id="price">450$</h2>
+               <button (click)="callService()" mat-button><mat-icon>shopping_cart</mat-icon></button> 
+            </div>
+        </div>
+        <div class="container-items">
+            <div class="col-sm-12 col-md-2">
+                <img src='/assets/iphone.png'>
+                <hr>
+            </div>
+            <div class="col-sm-12 col-md-5" style="text-align: center;">
+                <h1><b>Iphone 12 256GB</b></h1>
+                <button mat-flat-button color="primary"(click)="showDesc2()" style="margin-bottom: 50px;">{{"Data Sheet" | translate}}</button>
+                <div *ngIf="description2">
+                    <p id="descriptions" style="text-align: justify;">Apple iPhone SE is an iOS smartphone. The 4-inch screen of this smartphone is of the IPS LCD type and has a resolution of 640x1136 pixels. The processor of this device is a dual 64-bit Apple A9 running at 1.84 GHz and has a PowerVR GT7600 graphics processor</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1" style="margin-top: 45px;">
+                <h2 id="price">900$</h2>
+               <button (click)="callService()"mat-button><mat-icon>shopping_cart</mat-icon></button> 
+            </div>
+        </div>
+        <div class="container-items">
+            <div class="col-sm-12 col-md-2">
+                <img src='/assets/iphone.png'>
+                <hr>
+            </div>
+            <div class="col-sm-12 col-md-5" style="text-align: center;">
+                <h1><b>Iphone 13 256GB</b></h1>
+                <button mat-flat-button color="primary" (click)="showDesc3()" style="margin-bottom: 50px;">{{"Data Sheet" | translate}}</button>
+                <div *ngIf="description3">
+                    <p id="descriptions" style="text-align: justify;">Apple iPhone SE is an iOS smartphone. The 4-inch screen of this smartphone is of the IPS LCD type and has a resolution of 640x1136 pixels. The processor of this device is a dual 64-bit Apple A9 running at 1.84 GHz and has a PowerVR GT7600 graphics processor</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1" style="margin-top: 45px;">
+                <h2 id="price">1200$</h2>
+               <button (click)="callService()"mat-button><mat-icon>shopping_cart</mat-icon></button> 
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-2">
+        <img id="amazon" src='/assets/amazon.png'>
+        <hr>
+        <button mat-raised-button color="yellow">Ci trovi anche su amazon</button>
+        
+    </div>
+</div>
+</div>

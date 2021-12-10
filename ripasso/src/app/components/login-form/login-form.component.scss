@@ -26,8 +26,10 @@ img{
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-start;
+    
     margin-left: 300px;
     margin-top: 200px;
+    flex-wrap: nowrap;
 }
 
 .container-after{

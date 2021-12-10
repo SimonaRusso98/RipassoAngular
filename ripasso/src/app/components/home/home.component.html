@@ -21,43 +21,43 @@
         <div class="containerForm">
         <form [formGroup] = 'surveyform'(ngSubmit)="onSubmit()" style="margin-top: 150px;">
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Name</mat-label>
+            <mat-label>{{"Name"| translate}}</mat-label>
             <input matInput placeholder="Ex. Mario" value="">
             &nbsp;
           </mat-form-field>
           &nbsp;
           <mat-form-field class="example-full-width "  appearance="fill">
-            <mat-label>Surname</mat-label>
+            <mat-label>{{"Surname" | translate}}</mat-label>
             <input matInput placeholder="Ex. Rossi" value="">
             &nbsp;
           </mat-form-field>
         <br>
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Address</mat-label>
+          <mat-label>{{"Address" | translate}}</mat-label>
           <input matInput placeholder="Ex. Central Park" value="">
           &nbsp;
         </mat-form-field>
         &nbsp;
         <br>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Add Note</mat-label>
+            <mat-label>{{"Add Note" | translate}}</mat-label>
             <textarea matInput placeholder="Ex. Delivery at 9 pm..."></textarea>
             &nbsp;
           </mat-form-field>
           <div formGroupName="feelings">
           <mat-radio-group aria-label="Select an option">
-            <h2>It's the first time that you order here?</h2>
-            <mat-radio-button value="yes" (click)="ifClicked1()"> Yes </mat-radio-button><br><br>
+            <h2>{{"It's the first time that you order here?"| translate}}</h2>
+            <mat-radio-button value="yes" (click)="ifClicked1()"> {{"Yes" | translate}} </mat-radio-button><br><br>
             <mat-radio-button value="no" (click)="ifClicked2()">No</mat-radio-button><br><br>
-            <mat-radio-button value="maybe" (click)="ifClicked3()">Don't rembember</mat-radio-button><br><br>
+            <mat-radio-button value="maybe" (click)="ifClicked3()">{{"Don't remember" | translate}}</mat-radio-button><br><br>
           </mat-radio-group>
-          <button  mat-button color="primary" *ngIf="check1 || check3" (click)="showAlert()">Submit</button>
+          <button  mat-button color="primary" *ngIf="check1 || check3" (click)="showAlert()">{{"Submit" | translate}}</button>
         </div>
           <br>
           <div class="form-group">
-              <h4>State</h4>
+              <h4>{{"State" | translate}}</h4>
         <mat-form-field appearance="fill">
-          <mat-label>State</mat-label>
+          <mat-label>{{"State" | translate}}</mat-label>
           <mat-select>
             <mat-option>None</mat-option>
             <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>

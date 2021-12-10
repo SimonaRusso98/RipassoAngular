@@ -3,15 +3,22 @@
      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Welcome</span>
+    <span>{{"Welcome" | translate}}</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu"class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" style="margin-left: 50px;">
+      <button [matBadge]= "cs.count" matBadgeOverlap="true"mat-button><mat-icon>shopping_cart</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <div *ngIf="cs.count!=0">
+          <div *ngFor="cs.count">
+        <button mat-menu-item>item</button>
+      </div>
+    </div>
+      </mat-menu>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button style="margin-left: 50px;" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
      <mat-icon>share</mat-icon>
    </button>
-   <button routerLink= '/home' routerLinkActive="active" mat-icon-button class="example-icon" aria-label="Example icon-button with home icon">
+   <button style="margin-left: 30px;" routerLink= '/home' routerLinkActive="active" mat-icon-button class="example-icon" aria-label="Example icon-button with home icon">
     <mat-icon>home</mat-icon>
   </button>
   </mat-toolbar>

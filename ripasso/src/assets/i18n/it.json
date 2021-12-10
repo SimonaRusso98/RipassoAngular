@@ -1,0 +1,13 @@
+{"Name": "Nome",
+ "Surname": "Cognome",
+ "Address": "Indirizzo",
+ "State": "Stato",
+ "Add Note": "Aggiungi Nota",
+ "It's the first time that you order here?":"É la prima volta che ordini qui?",
+ "Yes": "Si",
+ "Don't remember": "Non ricordo",
+ "Welcome": "Benvenuto",
+"Apple iPhone XR is an iOS smartphone. The 6.1-inch screen of this smartphone is of the IPS LCD type and has a resolution of 828 x 1792 pixels. The resolution of the main camera is 12 megapixels and is also equipped with a stabilizer, while the secondary one is 7 megapixels.": "Apple iPhone XR è uno smartphone iOS. Lo schermo da 6,1 pollici di questo smartphone è di tipo IPS LCD ed ha una risoluzione di 828 x 1792 pixel. La risoluzione della fotocamera principale è di 12 megapixel ed è anche dotata di stabilizzatore, mentre quella secondaria è da 7 megapixel.",
+"Apple iPhone SE is an iOS smartphone. The 4-inch screen of this smartphone is of the IPS LCD type and has a resolution of 640x1136 pixels. The processor of this device is a dual 64-bit Apple A9 running at 1.84 GHz and has a PowerVR GT7600 graphics processor": "Apple iPhone SE è uno smartphone iOS. Lo schermo da 4 pollici di questo smartphone è di tipo IPS LCD ed ha una risoluzione di 640x1136 pixel. Il processore di questo dispositivo è un Apple A9 dual con supporto ai 64 bit che lavora alla frequenza di 1.84 GHz e ha un processore grafico PowerVR GT7600",
+"Data Sheet":"Scheda tecnica"
+}
