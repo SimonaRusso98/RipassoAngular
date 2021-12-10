@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -11,17 +10,17 @@ import { CartService } from 'src/app/services/cart.service';
 
 export class CatalogoComponent implements OnInit {
 
-  constructor(private cs: CartService) { }
-counts: number| undefined= 0;
-  description = false;
+constructor(private cs: CartService) { }
+
+  counts: number| undefined= 0;
+  description  = false;
   description1 = false; 
   description2 = false;
-  description3= false; 
+  description3 = false; 
   
  
   ngOnInit(){
     console.log(this.counts);
-
   }
 
   
@@ -52,22 +51,14 @@ counts: number| undefined= 0;
     this.description1 = false;
     this.description2 = false;  
   }
+
   set setData(v:number){
     this.cs.count=v;
-   
-    
    }
    
   callService=()=>{
-   
-    //this.isTrigger = this.cs.isClicked;
     this.cs.isClicked= !this.cs.isClicked;
-   const res = this.cs.counter();
-
-   console.log(res);
-   
-}
-
-
-
+    const res = this.cs.counter();
+    console.log(res);
+  }
 }

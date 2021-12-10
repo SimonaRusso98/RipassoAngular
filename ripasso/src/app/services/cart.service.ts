@@ -11,24 +11,14 @@ export class CartService {
   count: number=0;
   isClicked = false;
 
-
-
-
-/* counter =()=> {
-   if(this.isClicked){
-     console.log(this.isClicked);
-    this.count = this.count+1;
-   }
-    return this.count;
-  }
-*/
-
 counter = () =>{
   this.count = this.count +1;
 }
+
   getCount =()=> {
     return this.count;
 };
+
 }
 
 

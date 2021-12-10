@@ -9,15 +9,18 @@
       <button [matBadge]= "cs.count" matBadgeOverlap="true"mat-button><mat-icon>shopping_cart</mat-icon></button>
       <mat-menu #menu="matMenu">
         <div *ngIf="cs.count!=0">
-          <div *ngFor="cs.count">
-        <button mat-menu-item>item</button>
-      </div>
+        <button mat-menu-item>item1</button>
+        <button mat-menu-item>item2</button>
     </div>
       </mat-menu>
     </button>
-    <button style="margin-left: 50px;" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <button [matMenuTriggerFor]="menu" style="margin-left: 50px;" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
      <mat-icon>share</mat-icon>
    </button>
+   <mat-menu #menu="matMenu">
+    <button mat-menu-item>item1</button>
+    <button mat-menu-item>item2</button>
+  </mat-menu>
    <button style="margin-left: 30px;" routerLink= '/home' routerLinkActive="active" mat-icon-button class="example-icon" aria-label="Example icon-button with home icon">
     <mat-icon>home</mat-icon>
   </button>

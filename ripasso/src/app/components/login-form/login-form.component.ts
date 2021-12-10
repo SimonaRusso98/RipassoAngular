@@ -9,17 +9,13 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
 export class LoginFormComponent implements OnInit {
 
   validations_form!:FormGroup;
-  
   adminvalue:boolean=false;
   adminvalue1:boolean=false;
-
   isShown: boolean = true;
   showSpinner=false;
-
   name: string='';
+
   constructor(private fb: FormBuilder) { }
-  
- 
   
   ngOnInit(): void {
     this.validations_form = this.fb.group({
@@ -43,10 +39,8 @@ export class LoginFormComponent implements OnInit {
   }
 
   toggleShow() {
-
     this.isShown = ! this.isShown;
-    
-    }
+  }
 
     //funzione per far sparire lo spinner di loading dopo un tot tempo
     loadData(){
@@ -60,7 +54,4 @@ export class LoginFormComponent implements OnInit {
      const res = this.validations_form.get('username');
      return res;
     }
- 
-
-
 }
