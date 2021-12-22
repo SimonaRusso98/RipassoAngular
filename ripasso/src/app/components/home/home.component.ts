@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormControl, FormGroup, FormArray } from '@angular/forms';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,8 @@ export class HomeComponent implements OnInit {
     surveyform!:FormGroup;
     str:string = JSON.stringify(this.surveyform);
 
-    constructor(private fb: FormBuilder) { }
-
+    constructor(private fb: FormBuilder, public cs : CartService) { }
+    name:string='';
     states: string[] = [
       'Alabama',
       'Alaska',
@@ -129,4 +130,16 @@ export class HomeComponent implements OnInit {
     alert('Ecco per te uno sconto del 10%! EHFUNM');
   }
 
+
+  set setName(n:string){
+    this.cs.name=n;
+  }
+
+  set setSurname(s:string){
+    this.cs.surname = s;
+  }
+
+  set setAddress(a:string){
+    this.cs.address = a;
+  }
 }
