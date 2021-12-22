@@ -1,1 +1,37 @@
-<p>reviews works!</p>
+<div class="row">
+    <div class="col-sm-12 col-md-12" style="justify-content: flex-start; margin-top: 100px;">
+        <h1>Ecco cosa dicono di noi i nostri clienti: </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <h2 style="margin-bottom: 50px; font-style: italic;">Che aspetti a lasciare anche tu una recensione?</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="review" *ngFor="let review of reviews">
+            <p class="review-rating" *ngIf="review.rating">
+              <!-- 1 star  -->
+              <i [class]="(review.rating == 0) ? 'far fa-star' : (review.rating > 0 && review.rating < 1) ? 'fas fa-star-half-alt' : 'fas fa-star'"></i>
+          
+              <!-- 2 star  -->
+              <i [class]="(review.rating > 1 && review.rating < 2) ? 'fas fa-star-half-alt' : (review.rating >= 2) ? 'fas fa-star' : 'far fa-star'"></i>
+          
+              <!-- 3 star  -->
+              <i [class]="(review.rating > 2 && review.rating < 3) ? 'fas fa-star-half-alt' : (review.rating >= 3) ? 'fas fa-star' : 'far fa-star'"></i>
+          
+              <!-- 4 star  -->
+              <i [class]="(review.rating > 3 && review.rating < 4) ? 'fas fa-star-half-alt' : (review.rating >= 4) ? 'fas fa-star' : 'far fa-star'"></i>
+          
+              <!-- 5 star  -->
+              <i [class]="(review.rating > 4 && review.rating < 5) ? 'fas fa-star-half-alt' : (review.rating >= 5) ? 'fas fa-star' : 'far fa-star'"></i> 
+            </p>
+            <p><em>r = {{review.rating}}</em></p>
+            <p class="review-summary">{{ review?.reviewSummary }}</p>
+            <p class="review-feedback">{{ review?.reviewMessage }}</p>
+            
+          </div>
+    </div>
+</div>
